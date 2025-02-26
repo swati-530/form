@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body {
+            display: flex;
+           
+            justify-content: center;
+            align-items:center;
+            height: 100vh;
+            
+         background: url(bg1.jpg);
+            background-size: cover;
+            overflow: auto;
+            
+        }
+        .container {
+            width: 90%;
+            max-width:700px;
+          
+           
+            padding: 20px;
+            margin:  20px auto;
+            box-shadow: inset -2px 2px 2px white;
+            background:;
+            border-radius: 10px;
+            max-height:90vh;
+            overflow:visible;
+        }
+        .form-title {
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+            padding-bottom: 6px;
+            color: white;
+            text-shadow: 2px 2px 2px black;
+            border-bottom: solid 1px white;
+            margin-bottom: 20px;
+        }
+.main-user-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+        
+        .user-input-box {
+            display: flex;
+            flex-wrap: wrap;
+            width: 48%;
+            margin-bottom: 10px;
+        }
+        .user-input-box label {
+            width: 100%;
+            color: white;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+        .user-input-box input {
+            
+            width: 100%;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid  #ccc;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .gender-title {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 1px solid white;
+            margin-top: 10px;
+            display: block;
+        }
+        .gender-category {
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            max-width: 250px;
+            margin:auto;
+            
+        }
+        .gender-category label {
+            margin-right: 20px;
+        }
+        .form-submit-btn {
+            margin-top: 20px;
+        }
+        .form-submit-btn input {
+            width: 100%;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background: rgba(63, 114, 76, 0.7);
+            cursor: pointer;
+        }
+        .form-submit-btn input:hover {
+            background: darkgreen;
+        }
+        @media (max-width: 600px) {
+            .container {
+                min-width: 280px;
+            }
+            .user-input-box {
+                width: 100%;
+            }
+            .gender-category {
+                display: flex;
+                justify-content: space-between;
+            }
+            .main-user-info {
+                max-height: 380px;
+                overflow: auto;
+            }
+            .main-user-info::-webkit-scrollbar {
+                width: 0;  
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="form-title">Registration</h1>
+        <form action="#">
+            <div class="main-user-info">
+                <div class="user-input-box">
+                    <label for="fullname">First Name:</label>
+                    <input type="text" id="fullname" placeholder="Enter your first name" required />
+                </div>
+                <div class="user-input-box">
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname" placeholder="Enter your last name" required />
+                </div>
+                <div class="user-input-box">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" required />
+                </div>
+                <div class="user-input-box">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email" required />
+                </div>
+                <div class="user-input-box">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" placeholder="Enter your phone number" required />
+                </div>
+                <div class="user-input-box">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Enter your password" required />
+                </div>
+            </div>
+            <div class="gender-details-box">
+                <span class="gender-title">Gender</span>
+                <div class="gender-category">
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+            <div class="form-submit-btn">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
